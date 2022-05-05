@@ -22,6 +22,17 @@ img {
   object-fit: cover;
 }
 
+/*Estilos js*/
+.js-inativo{
+    display: none !important;
+}
+.js-ativo{
+    display: block !important;
+}
+.js-ativo-flex{
+    display: flex !important;
+}
+
 /*Estrutura grid*/
 .grid-geral, .gatos{
     display: grid;
@@ -107,6 +118,9 @@ nav {
     box-shadow: 0 4px #fff, 0 -4px #fff;
     margin-right: 4px;
     transition: .3s;
+}
+.menu-mobile.js-ativo-flex::before{
+    transform: rotate(90deg);
 }
 
 /*Raças*/
