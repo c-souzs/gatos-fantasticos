@@ -122,6 +122,50 @@ nav {
 .menu-mobile.js-ativo-flex::before{
     transform: rotate(90deg);
 }
+.menu-drop-down {
+    position: relative;
+}
+.menu-drop-down:hover .menu-drop-down-lista {
+    display: block;
+}
+.menu-drop-down-lista {
+    display: none;
+    background: #e54;
+    border: 2px solid #333;
+    position: absolute;
+    top: 40px;
+    z-index: 999;
+    padding: 10px;
+}
+.menu-drop-down-lista::before{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -10px;
+    content: "";
+    display: block;
+    border-bottom: 10px solid #e54;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.menu-drop-down-lista li {
+    transition: .3s;
+}
+.menu-drop-down-lista li:hover {
+    color: #fff;
+}
+.menu-lista li,
+.menu-drop-down-lista li {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: .875rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #222;
+}
 
 /*Raças*/
 .racas .container {
@@ -439,6 +483,13 @@ footer {
     nav{
         padding: 15px;
         margin-bottom: 15px;
+    }
+    .menu-drop-down-lista{
+        position: static;
+        margin-top: 15px;
+    }
+    .menu-drop-down-lista::before{
+        display: none;
     }
     .racas .lista-img{
         display: flex;
