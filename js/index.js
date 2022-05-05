@@ -1,9 +1,11 @@
 import MenuMobile from "./module/menu-mobile.js";
 import menuDropDown from "./module/menu-drop-down.js";
 import animacaoAoScroll from './module/animacao-ao-scroll.js';
+import navegacaoTab from './module/navegacao-tab.js';
 
 menuDropDown();
 animacaoAoScroll();
+navegacaoTab();
 // Menu mobile com classe
 const btnMenuMobile = document.querySelector('[data-menu-mobile="btn"]');
 const listaMenuMobile = document.querySelector('[data-menu-mobile="lista"]');
