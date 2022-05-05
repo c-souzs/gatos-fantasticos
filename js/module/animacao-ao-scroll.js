@@ -1,3 +1,5 @@
+import animaNumeros from "./anima-numeros.js";
+
 export default function animacaoAoScroll() {
   const sections = document.querySelectorAll("body section");
   const sectionVisivel = "section-visivel";
@@ -10,12 +12,27 @@ export default function animacaoAoScroll() {
     return distanciaArredondada - windowMetade;
   };
 
+  // Verifica se a section numero está visivel, se estiver chama o anima numeros e adiciona o atributo para evitar bugs e não repetir a animação.
+  const verificarSectionNumeros = (s, v) => {
+    const sectionNumeros = document.querySelector('[data-numero="section"]');
+
+    if (
+      s === sectionNumeros &&
+      v &&
+      !sectionNumeros.hasAttribute("animou-numeros")
+    ) {
+      animaNumeros();
+      sectionNumeros.setAttribute("animou-numeros", "");
+    }
+  };
+
   // Verifica se a section esta visivel ou não
   const animarSection = () => {
     sections.forEach((section) => {
       const sectionTop = section.getBoundingClientRect().top;
       const visivel = calcularDistanciaTopo(sectionTop) < 0;
 
+      verificarSectionNumeros(section, visivel);
 
       visivel ? section.classList.add(sectionVisivel) : "";
     });
