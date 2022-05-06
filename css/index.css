@@ -476,6 +476,93 @@ footer {
     font-weight: 700;
 }
 
+/*Modal*/
+.modal-container{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none; /*Mudar no js*/
+    justify-content: center;
+    align-items: center;
+}
+.modal-fechar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 30%);
+    background-color: #e54;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.2rem;
+    color: #fff;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-apoiar{
+    background-color: white;
+    padding: 40px;
+    border: 10px solid #FB5;
+    box-shadow: 0 0 0 10px white;
+    position: relative;
+    box-sizing: border-box;
+    animation: animaLeft .3s forwards;
+}
+@keyframes animaLeft{
+    from{
+        opacity: 0;
+        transform: translate3d(-50px, 0, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.modal-apoiar h3{
+    max-width: 400px;
+    font-size: 2.3rem;
+    font-weight: 600;
+    font-family: 'IBM Plex Mono', monospace;
+    margin-bottom: 30px;
+}
+.modal-apoiar label{
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 16px 0 8px;
+}
+.modal-apoiar input{
+    width: 100%;
+    min-width: 300px;
+    padding: 10px 8px;
+    font-family: Helvetica, Arial;
+    font-size: 1.125rem;
+    outline: none;
+    border: 2px solid #222;
+}
+.modal-apoiar button{
+    background-color: #e54;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 32px;
+    padding: 15px 32px;
+    cursor: pointer;
+}
+
 /*Responsividade*/
 @media(max-width: 1020px){
     .grid-section{
@@ -631,5 +718,42 @@ footer {
     }
     footer{
         text-align: center;
+    }
+    .modal{
+        height: 100%;
+    }
+    .modal-apoiar{
+        width: 100%;
+        height: inherit;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        justify-content: center;
+    }
+    .modal-fechar{
+        position: static;
+        margin-right: -30px;
+        margin-top: -30px;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .modal-apoiar h3{
+        top: 30px;
+        font-size: 2rem;
+        font-weight: 600;
+        font-family: 'IBM Plex Mono', monospace;
+        margin-right: 30px;
+        margin-bottom: 0;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        align-self: center;
+    }
+    .modal-apoiar form{
+        grid-column: 1/-1;
+    }
+    .modal-apoiar label{
+        margin-top: 30px;
+    }
+    .modal-apoiar input{
+        width: 100%;
     }
 }

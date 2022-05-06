@@ -3,11 +3,13 @@ import menuDropDown from "./module/menu-drop-down.js";
 import animacaoAoScroll from './module/animacao-ao-scroll.js';
 import navegacaoTab from './module/navegacao-tab.js';
 import accordionListFaq from './module/accordion-list-faq.js';
+import Modal from './module/modal.js';
 
 menuDropDown();
 animacaoAoScroll();
 navegacaoTab();
 accordionListFaq();
+
 // Menu mobile com classe
 const btnMenuMobile = document.querySelector('[data-menu-mobile="btn"]');
 const listaMenuMobile = document.querySelector('[data-menu-mobile="lista"]');
@@ -15,3 +17,11 @@ const eventos = ["click", "touchstart"];
 
 const confgMenuMobile = new MenuMobile(btnMenuMobile, listaMenuMobile, eventos);
 confgMenuMobile.inicar();
+
+// Modal com classe 
+const abrir = document.querySelector('[data-modal="link"]');
+const container = document.querySelector('[data-modal="container"]');
+const fechar = document.querySelector('[data-modal="fechar"]');
+
+const confgModal = new Modal(abrir, fechar, container, eventos);
+confgModal.inicar();
