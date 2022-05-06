@@ -44,6 +44,22 @@ body section.section-visivel{
     transform: translateZ(0);
 }
 
+.fechado-funcionamento::after{
+    background-color: #e54;
+}
+.aberto-funcionamento::after{
+    background-color: #3f4;
+}
+.aberto-funcionamento::after, .fechado-funcionamento::after{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    margin-left: 4px;
+    border: 2px solid #000;
+}
+
 .anima-left{
     animation: animaLeft .5s forwards;
 }
