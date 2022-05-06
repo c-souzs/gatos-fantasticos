@@ -1,4 +1,5 @@
 import listarRacas from "./module/listar-racas.js";
+import slideImgs from "./module/slide-imgs.js";
 import MenuMobile from "./module/menu-mobile.js";
 import menuDropDown from "./module/menu-drop-down.js";
 import animacaoAoScroll from './module/animacao-ao-scroll.js';
@@ -6,7 +7,9 @@ import accordionListFaq from './module/accordion-list-faq.js';
 import Modal from './module/modal.js';
 import funcionamento from './module/funcionamento.js';
 
+
 listarRacas();
+slideImgs();
 menuDropDown();
 animacaoAoScroll();
 accordionListFaq();

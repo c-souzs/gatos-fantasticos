@@ -6,10 +6,7 @@ export default function navegacaoTab() {
       '[data-navegacao-tab="descricoes"] .descricao'
     );
     const eventos = ["click", "touchstart"];
-      
-
-    console.log(imgs, descricoes);
-    
+          
     // Remove a classe js-ativo das descrições e coloca apenas na descrição correspondente
     const trocarDescricao = (i) => {
       descricoes.forEach((descricao) => descricao.classList.remove("js-ativo"));
