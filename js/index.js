@@ -4,11 +4,13 @@ import animacaoAoScroll from './module/animacao-ao-scroll.js';
 import navegacaoTab from './module/navegacao-tab.js';
 import accordionListFaq from './module/accordion-list-faq.js';
 import Modal from './module/modal.js';
+import funcionamento from './module/funcionamento.js';
 
 menuDropDown();
 animacaoAoScroll();
 navegacaoTab();
 accordionListFaq();
+funcionamento();
 
 // Menu mobile com classe
 const btnMenuMobile = document.querySelector('[data-menu-mobile="btn"]');
