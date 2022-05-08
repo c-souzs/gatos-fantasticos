@@ -1,55 +1,12 @@
-import fecthApi from "./fetch-api.js";
-import imagemApi from "./imagem-api.js";
 import navegacaoTab from "./navegacao-tab.js";
 
-export default async function listarRacas() {
+export default async function listarRacas(dImgs, dRacas) {
   const listaImgs = document.querySelector("[data-lista-imgs]");
   const listaDescricoes = document.querySelector("[data-lista-descricoes]");
 
-  const qtdRacas = 7;
-  // Exibe ao usuário uma mensagem de erro
-  const exibirErro = (mensagem) => {
-    const infoFetch = document.querySelector(".info-fetch");
-    const infoMensagem = document.querySelector(".info-fetch p");
-
-    infoFetch.classList.add("js-ativo-flex");
-    infoMensagem.innerText = mensagem;
-
-    // Caso dê algum erro a página é atualizada
-    let cont = 0;
-    const alerta = () => {
-      if (cont < 5) {
-        cont++;
-        infoMensagem.innerHTML = mensagem + `<br> A página irá atualizar em: ${cont} segundos`;
-        infoFetch.classList.add('js-ativo-flex');
-        console.log("Não parou o timer");
-      } else {
-        clearInterval(alertaTimer);
-        location.reload();
-        console.log("Parou o timer");
-      }
-    };
-    const alertaTimer = setInterval(alerta, 1000);
-  };
-
-  // Busca e lista as imgs da raca no dom
-  const imgs = async () => {
-    const imgs = [];
-
-    for (let i = 0; i < qtdRacas; i++) {
-      const promiseResultado = await imagemApi();
-
-      if (!promiseResultado.response) {
-        const mensagem = 'Erro ao acessar a api';
-        exibirErro(mensagem);
-        return;
-      }
-
-      promiseResultado.responseJson.length
-        ? imgs.push(promiseResultado.responseJson[0].url)
-        : exibirErro("Não foi póssível buscar as imagens");
-    }
-    const imgsHtml = imgs.reduce((acumulador, img, index) => {
+  // Lista as imgs da raça no dom
+  const imgs = () => {
+    const imgsHtml = dImgs.reduce((acumulador, img, index) => {
       const html = `<li><img src="${img}" alt="${index}"/></li>`;
       return (acumulador += html);
     }, "");
@@ -58,11 +15,7 @@ export default async function listarRacas() {
   };
 
   // Busca e lista as descricoes de cada raca no dom
-  const racas = async () => {
-    const promiseRacas = await fecthApi("https://api.thecatapi.com/v1/breeds");
-    const arrayRacas = promiseRacas.responseJson.filter(
-      (item, index) => index < qtdRacas
-    );
+  const racas = () => {
     const htmlDescricao = (
       id,
       nome,
@@ -119,7 +72,7 @@ export default async function listarRacas() {
     };
 
     let animacao = false;
-    const descricoesHtml = arrayRacas.reduce((acumulador, item) => {
+    const descricoesHtml = dRacas.reduce((acumulador, item) => {
       const {
         id,
         name,
@@ -164,8 +117,8 @@ export default async function listarRacas() {
     listaDescricoes.innerHTML = descricoesHtml;
   };
 
-  await imgs();
-  await racas();
+  imgs();
+  racas();
 
   navegacaoTab();
 }
