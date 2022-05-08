@@ -78,6 +78,7 @@ export default async function dados() {
     listarRacas(rImgsListarRacas, rRacasListarRacas);
     slideImgs(rImgsSlide);
     depoimentos(rImgsDepoimento, rDepoimentos);
+    
     divInfo.classList.remove("js-ativo-flex");
   } else {
     const pAlerta = divInfo.querySelector(".mensagem");
