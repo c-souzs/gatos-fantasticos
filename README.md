@@ -12,7 +12,8 @@
 <div id="sobre">
   <h1>📎 Sobre. </h1>
   <p> Com o foco no aprendizado de javascript, o site gatos fantásticos apresenta slides, modal, animações na DOM, validação de formulários e uma parte assíncrona que consume dados de uma API 
-    sobre gatos - <a href="https://thecatapi.com/">THE CAT API</a>. O site apresenta somente uma página com 7 sections, onde em cada uma é aplicado um conceito diferente de js.
+    sobre gatos - <a href="https://thecatapi.com/">THE CAT API</a>. Em seu desenvolvimento foi aplicado um gitflow para o conhecimento da ferramenta de versionamento.
+   O site apresenta somente uma página com 7 sections, onde em cada uma é aplicado um conceito diferente de js.
   </p>
  <p>Atualmente o projeto esta <b>FINALIZADO</b> e pode ser vizualizado na imagem abaixo ou acessado atráves do link: <a href="https://souzzs.github.io/gatos-fantasticos/">
    Gatos fantásticos 🐱</a>.</p>
@@ -30,6 +31,9 @@
   <li>Classes em javascript.</li>
   <li>Import e export.</li>
   <li>Formatação de datas e horários.</li>
+  <li>Github</li>
+  <li>Gitflow com branchs</li>
+  <li>Gitpages</li>
  </ul>
 <div>
   
