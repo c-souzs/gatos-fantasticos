@@ -1,46 +1,41 @@
 export default class Modal {
-    constructor(botaoAbrir, botaoFechar, containerModal, eventos) {
-      this.btnAbrir = botaoAbrir;
-      this.btnFechar = botaoFechar;
+    constructor(buttonOpen, buttonClose, containerModal, events) {
+      this.buttonOpen = buttonOpen;
+      this.buttonClose = buttonClose;
       this.container = containerModal;
-      this.e = eventos;
+      this.events = events;
   
-      // Muda o contexto do elemento
-      this.toffleModalEvento = this.toffleModalEvento.bind(this);
-      this.cliqueForaModal = this.cliqueForaModal.bind(this);
+      this.toggleModalEvent = this.toggleModalEvent.bind(this);
+      this.clickOutSideModal = this.clickOutSideModal.bind(this);
     }
   
-    // Abre/fecha a modal
     toggleModal() {
       this.container.classList.toggle('js-ativo-flex');
     }
   
-    // Adiciona o evento de toggle na modal
-    toffleModalEvento(event) {
+    toggleModalEvent(event) {
       event.preventDefault();
       this.toggleModal();
     }
   
-    // Fecha a modal se clicar do lado de fora
-    cliqueForaModal(event) {
+    clickOutSideModal(event) {
       if (event.target === this.container) {
         this.toggleModal();
       }
     }
   
-    // Adiciona os eventos aos elementos da modal
-    modalEventos() {
-      this.e.forEach(ev => {
-        this.btnAbrir.addEventListener(ev, this.toffleModalEvento);
-        this.btnFechar.addEventListener(ev, this.toffleModalEvento);
-        this.container.addEventListener(ev, this.cliqueForaModal);
+    eventsModal() {
+      this.events.forEach(ev => {
+        this.buttonOpen.addEventListener(ev, this.toggleModalEvent);
+        this.buttonClose.addEventListener(ev, this.toggleModalEvent);
+        this.container.addEventListener(ev, this.clickOutSideModal);
       });
     }
   
     // Inicia os eventos
-    inicar() {
-      if (this.btnAbrir && this.btnFechar && this.container) {
-        this.modalEventos();
+    init() {
+      if (this.buttonOpen && this.buttonClose && this.container) {
+        this.eventsModal();
       }
       return this;
     }
