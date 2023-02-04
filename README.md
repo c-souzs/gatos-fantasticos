@@ -10,16 +10,15 @@
 </p>
 
 <div id="sobre">
-  <h1>📎 Sobre. </h1>
-  <p> Com o foco no aprendizado de javascript, o site gatos fantásticos apresenta slides, modal, animações na DOM, validação de formulários e uma parte assíncrona que consume dados de uma API 
-    sobre gatos - <a href="https://thecatapi.com/">THE CAT API</a>. Em seu desenvolvimento foi aplicado um gitflow para o conhecimento da ferramenta de versionamento.
-   O site apresenta somente uma página com 7 sections, onde em cada uma é aplicado um conceito diferente de js.
+  <h1>📎 Sobre</h1>
+  <p>Com o foco no aprendizado de JavaScript, o site "Gatos Fantásticos" apresenta slides, modais, animações na DOM, validação de formulários e uma parte assíncrona que consome dados de uma API 
+    sobre gatos, a <a href="https://thecatapi.com/">THE CAT API</a>. Em seu desenvolvimento, foi aplicado um fluxo de trabalho com Git para conhecimento da ferramenta de versionamento.
+   O site tem apenas uma página com sete sections, cada uma com um conceito diferente de JavaScript.
   </p>
- <p>Atualmente o projeto esta <b>FINALIZADO</b> e pode ser vizualizado na imagem abaixo ou acessado atráves do link: <a href="https://souzzs.github.io/gatos-fantasticos/">
-   Gatos fantásticos 🐱</a>.</p>
+  <p>Atualmente, o projeto está <b>FINALIZADO</b> e pode ser visualizado na imagem abaixo ou acessado pelo link: <a href="https://souzzs.github.io/gatos-fantasticos/">
+   Gatos Fantásticos 🐱</a>.</p>
   <p align="center"><img src="./images/demo.gif"></p>
-  <p><em>Pse: A base o layout do site foi inspirado no site <a href="https://www.origamid.com/projetos/animais-fantasticos/">Animais fantásticos</a>. Entretanto 
-    funções como validação de formulário e consumo de API foram implementadas à parte por mim.</em></p>
+  <p><em>Nota: O layout do site foi inspirado no site <a href="https://www.origamid.com/projetos/animais-fantasticos/">Animais Fantásticos</a>, mas funções como a validação de formulários e o consumo de API foram implementadas separadamente por mim.</em></p>
 </div>
 
 <div id="aprendizados">
@@ -62,10 +61,15 @@
 <div id="autor">
   <h1>✏️ Autor.</h1>
   <p>Desenvolvimento por <a href="https://github.com/souzzs">Caio Souza</a>.</p>
-  <p>
-    <a href="https://instagram.com/seu-usuario/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&amp;logo=instagram&amp;logoColor=white" alt="Instagram Badge"></a>
-    <a href="https://discord.gg/seu-server"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&amp;logo=discord&amp;logoColor=white" alt="Discord Badge"></a>
-    <a href="https://www.linkedin.com/in/seu-usuario/"><img src="https://img.shields.io/badge/  LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="Linkedin"></a>
+  <a href="https://www.linkedin.com/in/souzzs/" target="_blank">
+    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+  </a>
+  <a href="mailto:souzsdev@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white">
+  </a>
+  <a href="https://discord.gg/BsnqGK6e" target="_blank">
+    <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+  </a>
   </p>
 </div>
   
